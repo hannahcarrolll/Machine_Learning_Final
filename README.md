@@ -66,9 +66,20 @@ Variations:
 
 ## Results
 ### Performance Comparison
+<img src="./images/training_accuracy.png" alt="Alt text" width="650" height="400"/>
+All models reached a training accuracy of 100% within 200 epochs other than SimpleNet and HighResNet. SimpleNet likely would need more epochs to reach 100% training accuracy because of its simplicity. HighResNet likely did not reach 100% training accuracy because of a runtime disconnect that occured while running the training loop.
+
+<img src="./images/confusion_matrix.png" alt="Alt text" width="650" height="400"/>
+The ideal confusion matrix above would be dark blue along the upper left to lower right diagonal. This would indicate true positives and true negatives which indicate the model is identifying DR correctly. Models performed with 36-47% accuraccy when identifying an DR score of 0 (no DR). All models were significantly worse at identifying true negatives for all other DR scores, averaging about 7% accuracy. The DenseNet models had the most true positives.  
 
 ### Example Predictions
+<img src="./images/example_predictions.png" alt="Alt text" width="500" height="600"/>
+We can see that none of the models are doing that good at predicting. Again the most accurate predictions are for DR 0. 
 
 ### Saliency
+<img src="./images/saliency.png" alt="Alt text" width="800" height="400"/>
 
 ## Limitations
+- Small dataset
+- Small number of epochs
+- High learning rate
