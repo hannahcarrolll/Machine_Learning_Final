@@ -1,10 +1,23 @@
 # RetinaMNIST Disease Classification with MONAI Models
 
 ## Motivation
+Diabetic retinopathy (DR) is a leading cause of blindness among adults with diabetes, yet its early detection remains a major challenge. Low adherence to retinal screening means that many cases are not diagnosed until they reach advanced, vision-threatening stages, limiting treatment options. Early diagnosis is critical to preventing severe vision loss, but many patients fail to undergo regular screenings.
+
+Artificial intelligence (AI) offers a promising solution to this problem by enabling faster, more accurate detection of DR through retinal imaging. However, machine learning algorithms still face significant challenges, particularly with complex datasets like RetinaMNIST, which is notoriously difficult for AI models to predict. Overcoming these challenges is key to developing more reliable, accessible, and efficient AI-driven screening tools.
+
+Improving AI models for DR detection has the potential to revolutionize screening practices, making early diagnosis more feasible and reducing the risk of preventable blindness in diabetic patients.
 
 ## Previous Work
+One notable approach is the use of Vision Transformers (ViT) for classifying 2D biomedical images. A study (Halder et al., 2024) compared the ViT-Base-Patch16-2249 model against benchmark accuracies, achieving a new benchmark accuracy of 57% on retinal images, highlighting the potential of ViT in DR classification.
+
+In a separate study, deep convolutional neural networks (CNNs) were applied to predict the worsening of DR based on fundus images acquired at a single visit. Accuracy was slightly better than random guessing (Neghawi et al., 2024)
+
+Another significant contribution is MedViT, a hybrid model combining Convolutional Neural Networks (CNNs) and Vision Transformers for medical image classification. This approach demonstrated increased robustness and generalization compared to state-of-the-art methods, particularly on large-scale standardized datasets like RetinaMNIST. Despite less computational complexity, MedViT showed strong resilience in handling the challenges posed by DR classification, though detailed accuracy results were not publicly available due to access restrictions. (Manzari et al., 2023).
+
+Unified Model Agnostic Computation (UMAC), using the MedMNIST+ dataset, addressed the challenges of retinal image classification. Despite various advanced techniques, the RetinaMNIST dataset remains one of the most difficult for AI models to handle, with benchmark accuracies still hovering around 50%. For example, methods like ISDA and UMAC with Self-Supervised Learning achieved accuracy rates of 52.6% and 51.3%, respectively, while the best-performing model, BSDA, reached only 53.3% (Manzari et al., 2024).
 
 ## Objective 
+The objective of this analysis is to use existing MONAI classification models to generate greater accuracy with the RetinaMNIST dataset than previous work has done. 
 
 ## Methods
 ### Dataset
